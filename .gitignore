@@ -1,0 +1,15 @@
+# STM32CubeIDE
+/.settings/
+/*/.launch
+/.project
+/.cproject
+/.metadata/
+/*.bin
+/*.elf
+/*.map
+/*.d
+/*.o
+/*.a
+/.dep
+/Debug/
+/Release/
