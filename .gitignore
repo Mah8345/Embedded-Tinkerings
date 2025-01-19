@@ -1,5 +1,5 @@
 # STM32CubeIDE
-/.settings/
+**/.settings/
 /*/.launch
 /.project
 /.cproject
@@ -11,5 +11,5 @@
 /*.o
 /*.a
 /.dep
-/Debug/
-/Release/
+**/Debug/
+**/Release/
