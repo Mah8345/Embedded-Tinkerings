@@ -20,3 +20,7 @@ The microcontroller sends the appropriate signals to light up the segments corre
    - A simple lookup table or an array is used to map digits (0-9) to their corresponding segment patterns.
 
 
+## Demonstration
+
+### Screenshot
+![seven segment example](../Assets/7seg.png)
