@@ -27,9 +27,16 @@ These projects are designed for the STM32F103C8T6 microcontroller using STM32Cub
 
 Each project in the repository is designed to be built and flashed onto the STM32F103C8T6 development board using STM32CubeIDE. 
 
+## Acknowledgments
+
+This project was guided by the concepts and examples from the book *STM32 ARM Programming for Embedded Systems Using C Language with STM32F4 ARM* by Muhammad Ali Mazidi, Shujen Chen, and Eshragh Ghaemi.
+
+## References 
+- Hitachi HD44780 Datasheet
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 
