@@ -41,6 +41,6 @@ The receiver microcontroller reads data transmitted by the transmitter via USART
 
 ## Results 
 
-![USART](../Assets/USART_Hello.git)
+![USART](../Assets/USART_Hello.gif)
 
 
