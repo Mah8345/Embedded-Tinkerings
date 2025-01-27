@@ -39,4 +39,8 @@ The receiver microcontroller reads data transmitted by the transmitter via USART
 - The LCD is configured in **4-bit mode** to minimize GPIO usage.
 
 
+## Results 
+
+![USART](../Assets/USART_Hello.git)
+
 
