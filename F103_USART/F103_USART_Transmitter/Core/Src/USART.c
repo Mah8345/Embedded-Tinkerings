@@ -25,7 +25,7 @@ void USART_TransmitterInit() {
 	USART3->CR1 |= USART_CR1_TE; //enable transmitter
 }
 
-void USART_SendChar(char data) {
+void USART_Write(char data) {
 	while (!(USART3->SR & USART_SR_TXE))
 		; //wait until TDR is empty
 	USART3->DR = data;
@@ -33,7 +33,7 @@ void USART_SendChar(char data) {
 
 void USART_SendMessage(char *message, uint32_t messageLength) {
 	for (int i = 0; i < messageLength; i++) {
-		USART_SendChar(message[i]);
+		USART_Write(message[i]);
 	}
 }
 
