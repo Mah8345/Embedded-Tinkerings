@@ -2,6 +2,7 @@
 
 void USART_TransmitterPinsInit() {
 	//TX pin
+	RCC->APB2ENR |= RCC_APB2ENR_IOPBEN;
 	GPIOB->CRH &= ~(GPIO_CRH_MODE10 | GPIO_CRH_CNF10); //clear PB10 MODE and CNF bits
 	GPIOB->CRH |= (GPIO_CRH_MODE10_1 | GPIO_CRH_CNF10_1); //set PB10 as push-pull alternate function output 2MHz
 }
