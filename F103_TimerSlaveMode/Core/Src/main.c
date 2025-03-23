@@ -1,0 +1,30 @@
+#include <stm32f103xb.h>
+
+void TIM2_SlaveModeInit() {
+	RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
+
+	GPIOA->CRL &= ~(GPIO_CRL_MODE0 | GPIO_CRL_CNF0);
+	GPIOA->CRL |= (GPIO_CRL_MODE0_1 | GPIO_CRL_CNF0_1);
+
+	TIM2->ARR = 1;
+	TIM2->CNT = 0;
+
+	TIM2->SMCR |= TIM_SMCR_ECE;
+	TIM2->SMCR |= 0x77;
+
+	TIM2->CR1 |= TIM_CR1_CEN;
+}
+
+int main() {
+	TIM2_SlaveModeInit();
+	RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
+	GPIOC->CRH &= ~(GPIO_CRH_MODE13 | GPIO_CRH_CNF13);
+	GPIOC->CRH |= (GPIO_CRH_MODE13_1);
+
+	while (1) {
+		if (TIM2->SR & TIM_SR_UIF){
+			GPIOC->ODR ^= GPIO_ODR_ODR13;
+			TIM2->SR &= ~TIM_SR_UIF;
+		}
+	}
+}
